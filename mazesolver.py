@@ -2,8 +2,6 @@ class MazeSolver:
     def __init__(self):
         with open('maze.txt', 'r') as f:
             self.maze = [[int(num) for num in line.split(' ')] for line in f]
-        self.row = 0
-        self.col = 0
         self.visited = [[False for _ in range(len(self.maze))] for _ in range(len(self.maze))]
         self.end_of_map = len(self.maze)
         self.path = {}
